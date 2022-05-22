@@ -17,5 +17,6 @@ public class Skill {
     private @Id String displayName;
     private double yearsOfExperience;
     private String proficiency;
+    private String category;
 
 }

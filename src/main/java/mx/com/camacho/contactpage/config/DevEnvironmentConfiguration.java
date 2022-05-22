@@ -16,7 +16,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Component
-@Profile("!prod")
+@Profile("dev")
 @Slf4j
 public final class DevEnvironmentConfiguration implements CommandLineRunner {
 
@@ -34,9 +34,9 @@ public final class DevEnvironmentConfiguration implements CommandLineRunner {
             "Oscar Uriel Camacho Hernandez",
             "Lead Software Engineer");
     private static final List<Skill> SKILL_LIST = List.of(
-            new Skill("Skill 1", 1.0, "novice"),
-            new Skill("Skill 2", 2.0, "intermediate"),
-            new Skill("Skill 3", 3.0, "expert"));
+            new Skill("Skill 1", 1.0, "novice", "category 1"),
+            new Skill("Skill 2", 2.0, "intermediate", "category 2"),
+            new Skill("Skill 3", 3.0, "expert", "category 2"));
 
     private static final List<ProfessionalExperience> PROFESSIONAL_EXPERIENCES = List.of(
             new ProfessionalExperience(1, "Role 1", "Company 1",
