@@ -11,6 +11,6 @@ public class CorsEnvironmentConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("https://oscarcamacho.github.io");
+        registry.addMapping("https://oscarcamacho.github.io/*");
     }
 }
