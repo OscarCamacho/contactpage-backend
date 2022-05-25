@@ -42,15 +42,15 @@ public final class DevEnvironmentConfiguration implements CommandLineRunner {
             new ProfessionalExperience(1, "Role 1", "Company 1",
                     List.of("Achievement 1", "Achievement 2", "Achievement 3"),
                     LocalDate.of(2022,1,1),
-                    LocalDate.of(2022,1,2)),
+                    null),
             new ProfessionalExperience(2, "Role 2", "Company 2",
                     List.of("Achievement 1", "Achievement 2", "Achievement 3"),
-                    LocalDate.of(2022,1,1),
-                    LocalDate.of(2022,1,2)),
+                    LocalDate.of(2022,3,1),
+                    LocalDate.of(2022,4,1)),
             new ProfessionalExperience(3, "Role 3", "Company 3",
                     List.of("Achievement 1", "Achievement 2", "Achievement 3"),
-                    LocalDate.of(2022,1,1),
-                    LocalDate.of(2022,1,2)));
+                    LocalDate.of(2022,5,1),
+                    LocalDate.of(2022,6,1)));
 
     @Override
     public void run(String... args) {

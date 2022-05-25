@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -18,16 +22,8 @@ public class SkillController {
     private SkillRepository skillRepository;
 
     @GetMapping
-    public List<String> getSkills () {
-        return skillRepository.findAll().stream()
-                .map(Skill::getDisplayName)
-                .collect(Collectors.toList());
-    }
-
-    @GetMapping("/{skillName}")
-    public Skill getSkill (@PathVariable String skillName) {
-        return skillRepository.findById(skillName)
-                .orElseThrow();
+    public List<Skill> getSkills () {
+        return skillRepository.findAll();
     }
 
 }

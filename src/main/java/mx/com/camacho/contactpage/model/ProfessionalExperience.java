@@ -28,19 +28,22 @@ public class ProfessionalExperience {
 
     public String getDuration () {
         StringBuilder durationBuilder = new StringBuilder();
-        Period between = Period.between(endDate, startDate);
+        LocalDate realEndDate = endDate == null ? LocalDate.now() : endDate;
+        Period between = Period.between(startDate, realEndDate);
         int years = between.getYears();
         int months = between.getMonths();
         durationBuilder.append(buildDurationString(years, "year"));
         durationBuilder.append(buildDurationString(months, "month"));
-        return durationBuilder.toString();
+        return durationBuilder.toString().trim();
     }
 
     private static String buildDurationString (int qty, String s) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(qty).append(" ").append(s);
-        if (qty > 1) {
-            stringBuilder.append("s");
+        if (qty >= 1) {
+            stringBuilder.append(qty).append(" ").append(s);
+            if (qty > 1) {
+                stringBuilder.append("s");
+            }
         }
         stringBuilder.append(" ");
         return stringBuilder.toString();
