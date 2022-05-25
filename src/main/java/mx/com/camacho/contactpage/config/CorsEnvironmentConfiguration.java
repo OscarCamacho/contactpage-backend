@@ -13,6 +13,6 @@ public class CorsEnvironmentConfiguration implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("**")
                 .allowedMethods("GET")
-                .allowedOrigins("https://oscarcamacho.github.io/*");
+                .allowedOrigins("**"); // Maybe insecure
     }
 }
