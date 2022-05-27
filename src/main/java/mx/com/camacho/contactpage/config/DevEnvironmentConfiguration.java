@@ -38,17 +38,21 @@ public final class DevEnvironmentConfiguration implements CommandLineRunner {
             new Skill("Skill 2", 2.0, "intermediate", "category 2"),
             new Skill("Skill 3", 3.0, "expert", "category 2"));
 
+    private static final String ACHIEVEMENT_1 = "Achievement 1";
+    private static final String ACHIEVEMENT_2 = "Achievement 2";
+    private static final String ACHIEVEMENT_3 = "Achievement 3";
+    private static final List<String> ACHIEVEMENT_LIST = List.of(ACHIEVEMENT_1, ACHIEVEMENT_2, ACHIEVEMENT_3);
     private static final List<ProfessionalExperience> PROFESSIONAL_EXPERIENCES = List.of(
             new ProfessionalExperience(1, "Role 1", "Company 1",
-                    List.of("Achievement 1", "Achievement 2", "Achievement 3"),
+                    ACHIEVEMENT_LIST,
                     LocalDate.of(2022,1,1),
                     null),
             new ProfessionalExperience(2, "Role 2", "Company 2",
-                    List.of("Achievement 1", "Achievement 2", "Achievement 3"),
+                    ACHIEVEMENT_LIST,
                     LocalDate.of(2022,3,1),
                     LocalDate.of(2022,4,1)),
             new ProfessionalExperience(3, "Role 3", "Company 3",
-                    List.of("Achievement 1", "Achievement 2", "Achievement 3"),
+                    ACHIEVEMENT_LIST,
                     LocalDate.of(2022,5,1),
                     LocalDate.of(2022,6,1)));
 

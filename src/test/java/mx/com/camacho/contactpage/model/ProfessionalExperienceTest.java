@@ -7,10 +7,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ProfessionalExperienceTest {
+class ProfessionalExperienceTest {
 
     @Test
-    public void getDuration_shouldReturnExpectedString () {
+    void getDuration_shouldReturnExpectedString () {
         ProfessionalExperience experience = new ProfessionalExperience(1, "Role", "Company",
                 List.of("achievement"), LocalDate.of(2021,1,1 ),
                 LocalDate.of(2022, 3, 1));
@@ -21,7 +21,7 @@ public class ProfessionalExperienceTest {
     }
 
     @Test
-    public void getDuration_shouldGetDifferenceBetweenTodayAndStartDate () {
+    void getDuration_shouldGetDifferenceBetweenTodayAndStartDate () {
         LocalDate start = LocalDate.of(2020,1,1 );
         ProfessionalExperience experience = new ProfessionalExperience(1, "Role", "Company",
                 List.of("achievement"), start,null);
