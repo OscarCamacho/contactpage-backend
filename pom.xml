@@ -67,6 +67,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.4.4</version>
+				<configuration>
+					<version>1</version>
+					<projectId>contact-page-362122</projectId>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
